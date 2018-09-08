@@ -1,0 +1,4 @@
+安装Eigen
+sudo apt-get install libeigen3-dev
+sduo updatedb
+locate eigen3
