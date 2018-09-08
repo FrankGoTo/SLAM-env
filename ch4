@@ -1,0 +1,5 @@
+#安装 Sophus
+#git clone http://github.com/starsdat/Sophus.git
+#cd Sophus
+#git checkout a621ff
+书中有Sophus源文件，cmake安装即可。
