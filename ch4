@@ -3,3 +3,12 @@
 #cd Sophus
 #git checkout a621ff
 书中有Sophus源文件，cmake安装即可。
+安装源代码有问题，将报错位置按如下方式修改即可。
+1  SO2::SO2()
+2 {
+3   //unit_complex_.real() = 1.;
+4   //unit_complex_.imag() = 0.;
+5   unit_complex_.real(1.); 
+6   unit_complex_.imag(0.);
+7 }
+
