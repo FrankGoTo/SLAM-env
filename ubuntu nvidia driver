@@ -1,0 +1,27 @@
+#可选
+#卸载显卡有两种方式：
+#使用apt-get安装的可以使用：sudo apt-get remove --purge nvidia* 命令卸载
+#使用runfile安装的可以使用：sudo ./NVIDIA-Linux-x86_64-*.run --uninstall 命令卸载
+
+禁用nouveau 及其重要 否则无法手动安装驱动
+
+sudo vi /etc/modprobe.d/blacklist.conf
+
+在文件最后添加下面两行：
+        blacklist nouveau
+        options nouveau modeset=0
+
+添加完成后保存退出
+执行：sudo update-initramfs -u
+
+
+
+重启电脑
+
+执行: lsmod | grep nouveau 命令后若没有输出，则说明卸载成功
+
+停止图形界面服务：sudo service gdm stop
+
+安装run文件
+
+开启图形界面：sudo service gdm stop
