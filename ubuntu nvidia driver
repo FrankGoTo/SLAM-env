@@ -54,4 +54,10 @@ sudo vi /etc/modprobe.d/blacklist.conf
         export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
         export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
         export CUDA_HOME=/usr/local/cuda-9.0
-       
+   
+ 3.安装cudnn
+ tar -xzvf cudnn-9.0-linux-x64-v7.tgz
+ 
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
