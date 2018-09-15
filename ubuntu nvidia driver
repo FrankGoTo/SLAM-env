@@ -61,3 +61,17 @@ sudo vi /etc/modprobe.d/blacklist.conf
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+
+4. pip换源
+cd ~
+sudo mkdir .pip
+sudo vim pip.conf
+
+#内容
+[global]
+
+index-url = http://pypi.douban.com/simple
+
+[install]
+
+trusted-host=pypi.douban.com
