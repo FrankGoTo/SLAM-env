@@ -12,6 +12,7 @@
 6   unit_complex_.imag(0.);
 7 }
 
-change gcc g++ version
-ln -s /usr/bin/g++-4.9 /usr/bin/g++
-ln -s /usr/bin/gcc-4.9 /usr/bin/gcc
+if make error,please downgrade the gcc and g++ version
+change gcc g++ version:
+  ln -s /usr/bin/g++-4.9 /usr/bin/g++
+  ln -s /usr/bin/gcc-4.9 /usr/bin/gcc
