@@ -79,3 +79,16 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 [install]
 
 trusted-host=https://pypi.tuna.tsinghua.edu.cn
+
+
+
+pip can not find "from pip import main"
+solution:
+
+sudo vim pip3
+
+#insert
+
+from pip import __main__
+if __name__ == '__main__':
+    sys.exit(__main__._main())
