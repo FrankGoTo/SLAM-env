@@ -1,0 +1,3 @@
+sudo apt-get install liblapack-dev libsuitesparse-dev libgflags-dev libgoogle-glog-dev libgtest-dev
+#but can't find the packge libcxsparse3.1.2
+#install it on the website https://packages.ubuntu.com
