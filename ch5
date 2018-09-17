@@ -3,3 +3,13 @@ libjasper-dev ??
 
 then install open cv
 !! do not make test file.use cmake-gui to avoiad make any test file!!
+sudo mkdir build && cd build
+cmake ..
+make
+sudo make install
+
+
+#install PCL
+#sudo add-apt-repository ppa:v-lanchpad-jochen-sprickerhof-de/pcl
+#sudo apt-get update
+sudo apt-get install libpcl-dev
