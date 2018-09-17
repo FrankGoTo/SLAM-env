@@ -51,9 +51,13 @@ sudo vi /etc/modprobe.d/blacklist.conf
         sudo update-alternatives --remove gcc /usr/bin/gcc-4.8
 （2）安装run，之前装过驱动，这次选择不安装。
 （3）将库文件 头文件 添加到环境变量
+        sudo vim ~/.bashrc
+
         export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
         export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
         export CUDA_HOME=/usr/local/cuda-9.0
+        
+        source ~/.bashrc
    
  3.安装cudnn
  tar -xzvf cudnn-9.0-linux-x64-v7.tgz
