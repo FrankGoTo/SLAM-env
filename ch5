@@ -13,3 +13,4 @@ sudo make install
 #sudo add-apt-repository ppa:v-lanchpad-jochen-sprickerhof-de/pcl
 #sudo apt-get update
 sudo apt-get install libpcl-dev
+sudo apt-get install pcl-tools
