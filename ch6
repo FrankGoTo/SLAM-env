@@ -15,7 +15,7 @@ libcxparse3.1.2
 libcholmod-dev
 
 
-
+#do not install example and test file
 
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 40
