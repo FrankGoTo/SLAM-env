@@ -58,6 +58,8 @@ sudo vi /etc/modprobe.d/blacklist.conf
         export CUDA_HOME=/usr/local/cuda-9.0
         
         source ~/.bashrc
+        #如果出现 libculabes.so.9.0 找不到路径 执行下面命令
+        #sudo ldconfig /usr/local/cuda-9.0/lib64
    
  3.安装cudnn
  tar -xzvf cudnn-9.0-linux-x64-v7.tgz
