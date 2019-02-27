@@ -94,3 +94,6 @@ sudo vim pip3
 from pip import __main__
 if __name__ == '__main__':
     sys.exit(__main__._main())
+    
+# TensorFlow 因异常停止 找不到cudnn.so
+sudo ldconfig /usr/local/cuda-9.0/lib64
