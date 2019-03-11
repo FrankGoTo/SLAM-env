@@ -1,0 +1,15 @@
+############################apt-get目录被锁#####################
+解决Could not get lock /var/cache/apt/archives/lock
+在ubuntu apt-get upgrade的时候，遇到：
+
+E: Could not get lock /var/cache/
+
+apt/archives/lock - open (11 Resource temporarily unavailable)
+E: Unable to lock the download directory
+
+出现这种问题可能是因为异常停止了运行中的程序，锁没有被释放导致，有两种办法
+
+1.sudo rm -rf /var/cache/apt/archives/lock 把这个文件删掉就好了
+
+2.exit终端再重新打开
+##############################################################
