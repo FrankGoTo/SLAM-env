@@ -1,0 +1,21 @@
+#############提示找不到nvcc的路径　只能修改源代码#######################################
+file path=/home/v100/.local/lib/python3.6/site-packages/pycuda/compiler.py
+
+To close the loop on this, I finally worked my way through the problem.
+
+Note: I know this is not really a good nor permanent answer for most people however in my case I am running POC code for my dissertation and as soon as I get some final results I'm decommissioning the servers. I doubt this answer will be suitable or appropriate for most users.
+
+I ended up hardcoding the full path to nvcc into compile_plain() in Pycuda's compiler.py file.
+
+Partial listing:
+
+def compile_plain(source, options, keep, nvcc, cache_dir, target="cubin"):
+    from os.path import join
+
+    assert target in ["cubin", "ptx", "fatbin"]
+    nvcc = '/usr/local/cuda/bin/'+nvcc
+    if cache_dir:
+        checksum = _new_md5()
+Hopefully this points someone else in the proper direction.
+#####################################################################################
+
