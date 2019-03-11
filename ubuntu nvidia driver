@@ -49,6 +49,21 @@ sudo vi /etc/modprobe.d/blacklist.conf
         ps:
         (1)当以上设置不需要的时候输入以下命令删除:
         sudo update-alternatives --remove gcc /usr/bin/gcc-4.8
+        
+        
+        ＃＃＃＃＃＃＃＃＃＃＃＃＃＃另一种降级方法＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃
+        cd /usr/bin
+        sudo rm gcc
+        sudo ln -s gcc-4.8 gcc
+        sudo rm g++
+        sudo ln -s g++-4.8 g++
+        # 查看是否连接到4.8.x
+        ls –al gcc g++
+        gcc --version
+        g++ --version
+        ＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃
+        
+        
 （2）安装run，之前装过驱动，这次选择不安装。
 （3）将库文件 头文件 添加到环境变量
         sudo vim ~/.bashrc
