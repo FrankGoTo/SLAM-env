@@ -18,6 +18,14 @@ sudo mkdir build && cd build
 cmake ..
 make
 sudo make install
+/*如果Eigen提示找不到头文件
+edit your privte.hpp in the:
+home/chowkidar/projects/opencv/modules/core/include/opencv2/core/private.hpp
+edit the line:
+# include <Eigen/Core>
+become:
+# include <eigen3/Eigen/Core>
+*/
 
 
 #install PCL
