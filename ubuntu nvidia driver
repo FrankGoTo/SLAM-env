@@ -37,6 +37,7 @@ sudo vi /etc/modprobe.d/blacklist.conf
         设置之前可以先输入命令ls /usr/bin/gcc* 查看gcc 4.8版本是否安装成功
         然后输入下面的命令设置默认版本:
         sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 100
+        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 100
         最后的数字为优先级(越大越高),因为只有一个4.8版本作为alternatives,可以不要纠结数字,这样设就行了
         (3)然后可以输入以下命令查看设置结果(非必须)
         sudo update-alternatives --config gcc
