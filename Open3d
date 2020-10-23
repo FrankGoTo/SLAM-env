@@ -1,3 +1,6 @@
+CMake must later than 3.15 !!!
 GCC G++ version=7
+
+
 follow official documents to install
 keep outside network
