@@ -124,3 +124,10 @@ export PATH=~/miniconda2/bin:$PATH
 export PATH=/mnt/new_disk/pycharm/bin:$PATH
 # 更新环境变量
 source ~/.bashrc
+
+
+# GCC Debug without Optimized
+#pragma GCC optimize (0)
+or
+set( CMAKE_BUILD_TYPE Debug )
+set( CMAKE_CXX_FLAGS "-std=c++11 -O0" )
